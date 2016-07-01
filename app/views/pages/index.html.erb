@@ -1,9 +1,10 @@
-<ul>
+
+<div class="container" style="max-width: 550px; text-align: center; margin: 0 auto; margin-top: 80px;">
+<h1>
 <% unless user_signed_in? %>
-	<li><%= link_to "Sign In", new_user_session_path %></li>		
-	<li><%= link_to "Sign up", new_user_registration_path %></li>		
+Participe você também.
 <% else %>
-	<li><%= current_user.email %></li>
-	<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
-<% end %>	
-</ul>
+Olá, <%= current_user.email %>.
+<% end %>
+</h1>
+</div>

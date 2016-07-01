@@ -1,3 +1,77 @@
-
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+html {
+	background: url('images/bg.jpg') no-repeat center fixed;
+	background-size: cover;
+}
+
+body {
+	background-color: transparent;
+	background-image: none;
+}
+
+.navbar-custom {
+  padding-top: 20px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.navbar-custom .navbar-toggle {
+  color: #4c3b3b;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 12px;
+}
+.navbar-custom .navbar-toggle:focus,
+.navbar-custom .navbar-toggle:active {
+  outline: none;
+}
+.navbar-custom .navbar-brand {
+  font-weight: 700;
+}
+.navbar-custom .navbar-brand:focus {
+  outline: none;
+}
+.navbar-custom a {
+  color: #4c3b3b;
+}
+.navbar-custom .nav li a {
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+.navbar-custom .nav li a:hover {
+  color: #000;
+  outline: none;
+  background-color: transparent;
+}
+.navbar-custom .nav li a:focus,
+.navbar-custom .nav li a:active {
+  outline: none;
+  background-color: transparent;
+}
+.navbar-custom .nav li.active {
+  outline: none;
+}
+.navbar-custom .nav li.active a {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.navbar-custom .nav li.active a:hover {
+  color: white;
+}
+
+.container-custom {
+	margin-top: 100px;
+}
+
+/*************************
+FORM-bootstrap
+**************************/
+
+.form-bootstrap {
+	width: 500px;
+	padding: 20px;
+	margin: 0 auto;
+	background-color: #D3DCE7;
+	box-shadow:rgba(0, 0, 0, 0.701961) 5px 5px 73px -5px;
+}
