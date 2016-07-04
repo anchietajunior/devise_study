@@ -1,3 +1,4 @@
+<div class="form-bootstrap">
 <%= form_for(@organization) do |f| %>
   <% if @organization.errors.any? %>
     <div id="error_explanation">
@@ -15,8 +16,25 @@
     <%= f.label :name %><br>
     <%= f.text_field :name, :class=>"form-control" %>
   </div>
+  <h3>Usuário</h3><br>
+
+  <%= f.fields_for :users do |ff| %>
+    <div class="form-group">
+      <label for="">E-mail</label>
+      <%= ff.text_field :email, :class=>"form-control" %>
+    </div>
+    <div class="form-group">
+      <label for="">Password</label>
+      <%= ff.text_field :password, :class=>"form-control" %>
+    </div>
+    <div class="form-group">
+      <label for="">Password Confirmation</label>
+      <%= ff.text_field :password_confirmation, :class=>"form-control" %>
+    </div>
+  <% end %>
   <div class="actions">
-    <%= f.submit "Nova organização", :class=>"btn btn-default" %>
+    <%= f.submit "Criar", :class=>"btn btn-default" %>
     <%= link_to "Organizações",organizations_path, :class=>"btn btn-default" %>
   </div>
 <% end %>
+</div>

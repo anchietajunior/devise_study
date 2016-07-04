@@ -4,7 +4,7 @@
 <% unless user_signed_in? %>
 Participe você também.
 <% else %>
-Olá, <%= current_user.email %>, você faz parte da <%= current_user.organization.name %>
+Olá, <%= current_user.email %>, você faz parte da <%= current_user.organization.name if current_user.organization %>
 <% end %>
 </h3>
 </div>
