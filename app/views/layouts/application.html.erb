@@ -10,15 +10,7 @@
 </head>
 <body>
 
-<% if notice %>
- <p class="notice">
-	<%= notice %>
- </p>
-<% elsif alert %>
- <p class="alert">
-	<%= alert %>
- </p>
-<% end %>
+
 
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
@@ -37,6 +29,7 @@
 						<li><%= link_to "Sign up", new_user_registration_path %></li>		
 					<% else %>
 						<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+            <li><%= link_to "Clientes", customers_path %></li>
 					<% end %>
                 </ul>
             </div>
@@ -45,11 +38,28 @@
         <!-- /.container -->
 </nav>
 
+
+
 <div class="container container-custom">
+<% if notice %>
+<div class="hide_content" style="height: 50px; width: 100%; text-align: center;">
+  <div class="alert alert-success">
+    <%= notice %>
+  </div>  
+</div>
+<% elsif alert %>
+<div class="hide_content" style="height: 50px; width: 100%; text-align: center;">
+<div class="alert alert-info">
+  <%= alert %>
+</div>
+</div>
+<% end %>
 	<%= yield %>		
 </div>
 
 
-
+<script>
+    setTimeout("$('.hide_content').fadeOut('slow')", 3000)
+</script>
 </body>
 </html>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :customers
   resources :organizations
   devise_for :users
   get 'pages/index'
