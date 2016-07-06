@@ -1,23 +1,19 @@
 class CustomersController < ApplicationController
   before_action :set_customer, only: [:show, :edit, :update, :destroy]
 
-  # GET /customers
-  # GET /customers.json
   def index
-    @customers = Customer.where("organization_id = ?", current_user.organization_id)
+    if Organization.all.size > 0
+      @customers = Customer.where("organization_id = ?", current_user.organization_id)  
+    end
   end
 
-  # GET /customers/1
-  # GET /customers/1.json
   def show
   end
 
-  # GET /customers/new
   def new
     @customer = Customer.new
   end
 
-  # GET /customers/1/edit
   def edit
   end
 
